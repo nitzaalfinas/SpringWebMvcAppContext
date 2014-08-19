@@ -15,8 +15,7 @@ public class HomeController {
 	public String tutContext() {
 		ApplicationContext context = new ClassPathXmlApplicationContext("MyBeans.xml");
 		
-		TutAppContext obj = (TutAppContext) context.getBean("helloBean");
-		//obj.printHello();
-		return obj.printJsonString();
+		TutAppContext tutBean = (TutAppContext) context.getBean("tutBean");
+		return tutBean.printJsonString();
 	}
 }
