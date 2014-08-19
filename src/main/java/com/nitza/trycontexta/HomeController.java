@@ -13,7 +13,7 @@ public class HomeController {
 	@RequestMapping("/")
 	@ResponseBody
 	public String tutContext() {
-		ApplicationContext context = new ClassPathXmlApplicationContext("SpringBeans.xml");
+		ApplicationContext context = new ClassPathXmlApplicationContext("MyBeans.xml");
 		
 		TutAppContext obj = (TutAppContext) context.getBean("helloBean");
 		//obj.printHello();
